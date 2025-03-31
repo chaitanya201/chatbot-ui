@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes glow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+@keyframes pulse-border {
+  0% { border-color: rgba(59, 130, 246, 0.5); }
+  50% { border-color: rgba(59, 130, 246, 0.8); }
+  100% { border-color: rgba(59, 130, 246, 0.5); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.sci-fi-glow {
+  animation: glow 2s infinite;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3),
+              0 0 30px rgba(59, 130, 246, 0.2),
+              0 0 45px rgba(59, 130, 246, 0.1);
+}
+
+.pulse-border {
+  animation: pulse-border 2s infinite;
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
