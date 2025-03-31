@@ -31,20 +31,6 @@ function App() {
     scrollToBottom();
   }, [chatState.messages]);
 
-  const generateResponse = async (userMessage: string): Promise<string> => {
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    const responses = [
-      "Processing your input... Please elaborate further.",
-      "Analyzing patterns in your statement. What additional context can you provide?",
-      "Interesting perspective. My algorithms suggest exploring this further.",
-      "Quantum analysis complete. Here's my assessment...",
-      "My neural networks are intrigued. Tell me more about your thoughts.",
-    ];
-
-    return responses[Math.floor(Math.random() * responses.length)];
-  };
-
   const handleSendMessage = async (content: string) => {
     const userMessage: Message = {
       id: Date.now().toString(),
