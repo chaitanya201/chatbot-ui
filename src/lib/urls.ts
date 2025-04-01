@@ -1,13 +1,13 @@
 type TEnv = "development" | "production";
 
-const currentEnvironment: TEnv = "development";
+const currentEnvironment: TEnv = "production";
 const baseUrl = `api/v1`;
 const serverUrls = {
   development: {
     server: `http://localhost:5000/${baseUrl}`,
   },
   production: {
-    server: `http://localhost:5000/${baseUrl}`,
+    server: `https://chatbot-yuj1.onrender.com/${baseUrl}`,
   },
 };
 
